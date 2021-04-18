@@ -1,6 +1,6 @@
 {
 	"name": "express-clickup",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An Express middleware for handling validation of Clickup Webhooks",
 	"main": "./src/index.js",
 	"scripts": {
