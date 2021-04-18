@@ -4,6 +4,9 @@ node_modules
 .vscode
 .eslintrc.json
 .prettierrc.json
+.prettierignore
 .gitattributes
 .gitignore
 npm-debug.log
+test/
+.github/
