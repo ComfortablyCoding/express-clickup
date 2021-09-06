@@ -11,8 +11,8 @@ import { generateSignature, isValidClickupEvent, isValidSignature } from './util
  * @returns {RequestHandler} middleware
  */
 function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler {
-	const secret = config.secret || '';
 	const headerSignature = config.headerSignature || 'x-signature';
+	const webhooks = config.webhooks || [];
 
 	// eslint-disable-next-line func-names, consistent-return
 	return (req: Request, res: Response, next: NextFunction) => {
@@ -30,9 +30,15 @@ function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler {
 		}
 
 		// Ensure a valid event has been received
-		const { event } = body;
+		const { event, webhook_id } = body;
 		if (!isValidClickupEvent(event)) {
 			return res.sendStatus(400);
+		}
+
+		// Ensure this is a webhook we wish to listen to
+		const webhook = webhooks.find(({ id }) => id === webhook_id);
+		if (!webhook) {
+			return res.sendStatus(401);
 		}
 
 		// verify signature
@@ -43,7 +49,7 @@ function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler {
 			return res.sendStatus(500);
 		}
 
-		const generatedSignature = generateSignature(stringifiedBody, secret);
+		const generatedSignature = generateSignature(stringifiedBody, webhook.secret);
 		if (!isValidSignature(signature, generatedSignature)) {
 			return res.sendStatus(401);
 		}
