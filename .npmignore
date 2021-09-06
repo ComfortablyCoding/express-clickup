@@ -1,5 +1,4 @@
 # NPM
-node_modules
 .git
 .vscode
 .eslintrc.json
@@ -8,5 +7,7 @@ node_modules
 .gitattributes
 .gitignore
 npm-debug.log
-test/
+test
 .github/
+src
+tsconfig.json
