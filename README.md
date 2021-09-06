@@ -24,7 +24,12 @@ app.use(express.json());
 
 // Initialize middleware with config
 const clickupWebhookOptions = {
-	secret: 'secret',
+	webhooks: [
+		{
+			id: '689a169-a000-4985-8676-6902b96d6627',
+			secret: 'f7bc83f430538424b13298e6aa6',
+		},
+	],
 };
 const isValidClickupWebhook = clickupWebhook(clickupWebhookOptions);
 
