@@ -1,0 +1,58 @@
+// Mapped from https://www.typescriptlang.org/tsconfig
+{
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "es5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+
+		/* Modules */
+		"module": "commonjs" /* Specify what module code is generated. */,
+		"moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
+		"baseUrl": "." /* Specify the base directory to resolve non-relative module names. */,
+		/* Specify a set of entries that re-map imports to additional lookup locations. */
+		"paths": {
+			"*": ["node_modules/*"]
+		},
+		"resolveJsonModule": true,
+
+		/* Emit */
+		"declaration": true,
+		"declarationMap": true,
+		"importHelpers": true,
+		"importsNotUsedAsValues": "error",
+		"newLine": "lf",
+		"noEmitHelpers": true,
+		"sourceRoot": "/",
+		"sourceMap": true /* Create source map files for emitted JavaScript files. */,
+		"inlineSources": true,
+		"outDir": "dist" /* Specify an output folder for all emitted files. */,
+		"removeComments": true /* Disable emitting comments. */,
+
+		/* Language & Environment*/
+		"useDefineForClassFields": true,
+		"lib": ["ESNext"],
+
+		/* Interop Constraints */
+		"esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+		/* Type Checking */
+		"strict": true /* Enable all strict type-checking options. */,
+		"alwaysStrict": true,
+		"noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noImplicitOverride": true,
+		"noImplicitReturns": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictFunctionTypes": true,
+
+		/* Completeness */
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
+
+		/*Output Formatting*/
+		"pretty": true
+	},
+	"exclude": ["node_modules", "**/node_modules/**"]
+}
