@@ -19,6 +19,9 @@ pids
 # Dependency directories
 node_modules/
 
+# Typescript output folder
+dist
+
 # TypeScript v1 declaration files
 typings/
 
