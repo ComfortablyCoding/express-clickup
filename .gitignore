@@ -33,3 +33,6 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+
+# Jest coverage directory
+coverage

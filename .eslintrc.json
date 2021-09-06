@@ -4,7 +4,7 @@
 		"commonjs": true,
 		"es2020": true,
 		"node": true,
-		"mocha": true
+		"jest": true
 	},
 	"parser": "@typescript-eslint/parser",
 	"extends": [

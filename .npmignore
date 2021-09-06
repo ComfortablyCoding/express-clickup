@@ -7,7 +7,7 @@
 .gitattributes
 .gitignore
 npm-debug.log
-test
+__test__
 .github/
 src
 tsconfig.json
