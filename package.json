@@ -3,6 +3,7 @@
 	"version": "1.0.1",
 	"description": "An Express middleware for handling validation of Clickup Webhooks",
 	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"test": "jest --coverage",
 		"build": "tsc",
