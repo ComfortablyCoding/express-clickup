@@ -10,7 +10,7 @@ import { generateSignature, isValidClickupEvent, isValidSignature } from './util
  * @param {String} [config.headerSignature="x-signature"] The header signature to look for, defaults to X-Signature
  * @returns {RequestHandler} middleware
  */
-export default function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler {
+export function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler {
 	const headerSignature = config.headerSignature || 'x-signature';
 	const webhooks = config.webhooks || [];
 
