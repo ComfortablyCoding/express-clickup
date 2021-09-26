@@ -53,3 +53,5 @@ export function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler 
 		next();
 	};
 }
+
+export { ClickupMiddlewareConfig } from './types';
