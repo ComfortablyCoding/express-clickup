@@ -1,5 +1,6 @@
 // Mapped from https://www.typescriptlang.org/tsconfig
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
 	"include": ["src/**/*"],
 	"compilerOptions": {
 		/* Language and Environment */
