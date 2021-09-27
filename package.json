@@ -1,6 +1,6 @@
 {
 	"name": "express-clickup",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "An Express middleware for handling validation of Clickup Webhooks",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -54,6 +54,6 @@
 		"url": "https://github.com/ComfortablyCoding/express-clickup/issues"
 	},
 	"engines": {
-    "node": ">=12.0.0"
-  }
+		"node": ">=12.0.0"
+	}
 }
