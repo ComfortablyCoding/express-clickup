@@ -5,7 +5,8 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"test": "jest --coverage",
+		"test": "jest",
+		"test:coverage": "jest --coverage",
 		"build": "tsc",
 		"lint": "eslint --fix **/*.{ts,js,json,yml}",
 		"format": "prettier --write **/*.{ts,js,json,yml}"
