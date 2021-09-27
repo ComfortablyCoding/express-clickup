@@ -23,11 +23,11 @@ jobs:
       - name: Clean install deps
       - run: npm ci
 
-      - name: Build Typescript
-      - run: npm run build
-
       - name: Run tests
       - run: npm test
+
+      - name: Build Typescript
+      - run: npm run build
 
       - name: Publish to NPM
       - run: npm publish
