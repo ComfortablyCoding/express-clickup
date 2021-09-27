@@ -1,12 +1,26 @@
-# Prettier
-node_modules
+# prettier
+.prettierignore
+
+# npm
+npm-debug.log
+.npmignore
+
+# git
 .git
 .gitattributes
 .gitignore
-npm-debug.log
+
+# node
+node_modules
+
+# husky
 .husky
-.npmignore
-.prettierignore
+
+# config files
 .editorconfig
+
+# build output
 dist
+
+# jest
 coverage
