@@ -1,12 +1,36 @@
-# NPM
-node_modules
+# npm
+npm-debug.log
+
+# git
 .git
-.vscode
-.eslintrc.json
-.prettierrc.json
-.prettierignore
 .gitattributes
 .gitignore
-npm-debug.log
-test/
-.github/
+
+# vscode
+.vscode
+
+# RC files
+.eslintrc.json
+.prettierrc.json
+.lintstagedrc.json
+
+# ignore files
+.prettierignore
+
+# config files
+tsconfig.json
+babel.config.js
+.editorconfig
+
+# github
+.github
+
+# husky
+.husky
+
+# core and tests
+src
+__test__
+
+# jest
+coverage

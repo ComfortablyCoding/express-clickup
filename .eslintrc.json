@@ -4,11 +4,17 @@
 		"commonjs": true,
 		"es2020": true,
 		"node": true,
-		"mocha": true
+		"jest": true
 	},
-	"extends": ["airbnb-base", "prettier"],
-	"plugins": ["prettier"],
-	"ignorePatterns": ["node_modules/**/*.js"],
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"plugins": ["@typescript-eslint", "prettier"],
+	"ignorePatterns": ["node_modules/**/*", "dist/**/*"],
 	"parserOptions": {
 		"ecmaVersion": 11
 	},

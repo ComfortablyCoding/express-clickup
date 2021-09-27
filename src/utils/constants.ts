@@ -1,4 +1,4 @@
-const CLICKUP_EVENTS = new Set([
+export const CLICKUP_EVENTS: Set<string> = new Set([
 	'*',
 	'taskCreated',
 	'taskUpdated',
@@ -29,7 +29,3 @@ const CLICKUP_EVENTS = new Set([
 	'keyResultUpdated',
 	'keyResultDeleted',
 ]);
-
-module.exports = {
-	CLICKUP_EVENTS,
-};

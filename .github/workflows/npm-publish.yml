@@ -5,29 +5,31 @@ name: Publish to NPM
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-      - run: npm ci
-      - run: npm test
-
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Install Node v12
+        uses: actions/setup-node@v2
         with:
-          node-version: "12.x"
-          registry-url: "https://registry.npmjs.org"
-      - run: npm ci
-      - run: npm publish
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Clean install deps
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build Typescript
+        run: npm run build
+
+      - name: Publish to NPM
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

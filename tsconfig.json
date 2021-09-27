@@ -1,0 +1,51 @@
+// Mapped from https://www.typescriptlang.org/tsconfig
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "es6",
+
+		/* Modules */
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"allowSyntheticDefaultImports": true,
+
+		/* Emit */
+		"declaration": true,
+		"declarationMap": true,
+		"importsNotUsedAsValues": "error",
+		"newLine": "lf",
+		"noEmitHelpers": true,
+		"sourceMap": true,
+		"inlineSources": true,
+		"outDir": "dist",
+		"removeComments": true ,
+
+		/* Language & Environment*/
+		"useDefineForClassFields": true,
+		"lib": ["ESNext"],
+
+		/* Interop Constraints */
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		/* Type Checking */
+		"strict": true,
+		"alwaysStrict": true,
+		"noImplicitAny": true,
+		"allowUnreachableCode": false,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictFunctionTypes": true,
+
+		/* Completeness */
+		"skipLibCheck": true,
+
+		/*Output Formatting*/
+		"pretty": true
+	},
+}
