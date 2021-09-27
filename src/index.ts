@@ -14,7 +14,6 @@ export function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler 
 	const headerSignature = config.headerSignature || 'x-signature';
 	const webhooks = config.webhooks || [];
 
-	// eslint-disable-next-line func-names, consistent-return
 	return (req: Request, res: Response, next: NextFunction) => {
 		const signature = req.get(headerSignature);
 		const { body } = req;
@@ -50,7 +49,7 @@ export function clickupWebhook(config: ClickupMiddlewareConfig): RequestHandler 
 		}
 
 		res.sendStatus(200);
-		next();
+		return next();
 	};
 }
 
