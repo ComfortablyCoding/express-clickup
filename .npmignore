@@ -1,4 +1,4 @@
-# NPM
+# npm
 npm-debug.log
 
 # git
@@ -17,7 +17,7 @@ npm-debug.log
 # ignore files
 .prettierignore
 
-#config files
+# config files
 tsconfig.json
 babel.config.js
 .editorconfig
@@ -31,3 +31,6 @@ babel.config.js
 # core and tests
 src
 __test__
+
+# jest
+coverage
