@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import request from 'supertest';
-import clickupWebhook from '../src';
+import { clickupWebhook } from '../src';
 
 let app: Express;
 
