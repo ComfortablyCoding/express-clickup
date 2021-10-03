@@ -17,7 +17,6 @@
 		"declarationMap": true,
 		"importsNotUsedAsValues": "error",
 		"newLine": "lf",
-		"noEmitHelpers": true,
 		"sourceMap": true,
 		"inlineSources": true,
 		"outDir": "dist",
